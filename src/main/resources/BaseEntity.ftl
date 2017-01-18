@@ -1,6 +1,6 @@
-package ${pkg};
+package ${pkg}.base;
 
-import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,15 +16,15 @@ import ${pkg};
  *
  * ${description}
  */
-@Entity
 @Getter
 @Setter
-public class ${className} {
+@MappedSuperclass
+public class Base${className} {
     /**
      * コンストラクタ
      * 
      */
-    public ${className}() {
+    public Base${className}() {
     }
 
     /**
@@ -33,7 +33,7 @@ public class ${className} {
      * @param id
      *            ID
      */
-    public ${className}(${pkColumn.javaType} id) {
+    public Base${className}(${pkColumn.javaType} id) {
         this.${pkColumn.fieldName} = id;
     }
 <#list columns as col>

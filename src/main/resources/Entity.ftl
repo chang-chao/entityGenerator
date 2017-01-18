@@ -1,22 +1,24 @@
-package test.entity;
+package ${pkg};
 
 import javax.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
 
-import test.entity.base.BaseParent;
+import ${pkg}.base.Base${className};
 
 /**
  *
- * 親テーブル
+ * ${description}
  */
 @Entity
 @Getter
 @Setter
-public class Parent extends BaseParent{
+public class ${className} extends Base${className}{
     /**
      * コンストラクタ
      * 
      */
-    public Parent() {
+    public ${className}() {
     }
 
     /**
@@ -25,7 +27,7 @@ public class Parent extends BaseParent{
      * @param id
      *            ID
      */
-    public Parent(Integer id) {
+    public ${className}(${pkColumn.javaType} id) {
         super(id);
     }
 }

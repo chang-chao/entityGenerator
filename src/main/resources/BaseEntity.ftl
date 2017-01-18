@@ -19,7 +19,7 @@ import ${pkg};
 @Getter
 @Setter
 @MappedSuperclass
-public class Base${className} {
+public abstract class Base${className} {
     /**
      * コンストラクタ
      * 

@@ -91,7 +91,7 @@ public class ColumnInfo {
       return javaClasType.getSimpleName();
     }
 
-    return CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, fkInfo.getRefTable());
+    return "Base" + CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, fkInfo.getRefTable());
   }
 
   private FkInfo getFkInfo() {

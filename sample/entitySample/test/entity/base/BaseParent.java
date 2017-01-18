@@ -20,7 +20,7 @@ import javax.persistence.SequenceGenerator;
 @Getter
 @Setter
 @MappedSuperclass
-public class BaseParent {
+public abstract class BaseParent {
     /**
      * コンストラクタ
      * 

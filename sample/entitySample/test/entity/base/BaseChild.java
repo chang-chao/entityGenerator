@@ -22,7 +22,7 @@ import javax.persistence.SequenceGenerator;
 @Getter
 @Setter
 @MappedSuperclass
-public class BaseChild {
+public abstract class BaseChild {
     /**
      * コンストラクタ
      * 
@@ -53,7 +53,7 @@ public class BaseChild {
      */
     @ManyToOne
     @JoinColumn(name = "parent_data_id")
-    private Parent parentData;
+    private BaseParent parentData;
 
     /**
      * 子供名

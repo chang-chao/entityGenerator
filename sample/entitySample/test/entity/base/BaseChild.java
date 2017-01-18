@@ -49,13 +49,6 @@ public abstract class BaseChild {
     private Long childDataId;
 
     /**
-     * 親データID
-     */
-    @ManyToOne
-    @JoinColumn(name = "parent_data_id")
-    private BaseParent parentData;
-
-    /**
      * 子供名
      */
     private String name;

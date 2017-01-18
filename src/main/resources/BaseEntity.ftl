@@ -37,6 +37,7 @@ public abstract class Base${className} {
         this.${pkColumn.fieldName} = id;
     }
 <#list columns as col>
+<#if !col.fk>
 
     /**
      * ${col.description}
@@ -45,6 +46,7 @@ public abstract class Base${className} {
     ${annotation}
   </#list>
     private ${col.javaType} ${col.fieldName};
+</#if >
 </#list>
 
     /**

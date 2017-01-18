@@ -30,4 +30,11 @@ public class Child extends BaseChild{
     public Child(Long id) {
         super(id);
     }
+
+    /**
+     * 親データID
+     */
+    @ManyToOne
+    @JoinColumn(name = "parent_data_id")
+    private Parent parentData;
 }

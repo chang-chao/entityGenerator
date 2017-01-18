@@ -91,7 +91,7 @@ public class ColumnInfo {
       return javaClasType.getSimpleName();
     }
 
-    return "Base" + CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, fkInfo.getRefTable());
+    return CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, fkInfo.getRefTable());
   }
 
   private FkInfo getFkInfo() {
@@ -156,5 +156,9 @@ public class ColumnInfo {
 
   private boolean isDate() {
     return sqlType.equals("date") || sqlType.equals("timestamp");
+  }
+
+  public boolean isFk() {
+    return this.getFkInfo() != null;
   }
 }

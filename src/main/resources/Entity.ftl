@@ -30,4 +30,16 @@ public class ${className} extends Base${className}{
     public ${className}(${pkColumn.javaType} id) {
         super(id);
     }
+<#list columns as col>
+<#if col.fk>
+
+    /**
+     * ${col.description}
+     */
+  <#list col.annotations as annotation>
+    ${annotation}
+  </#list>
+    private ${col.javaType} ${col.fieldName};
+</#if >
+</#list>
 }

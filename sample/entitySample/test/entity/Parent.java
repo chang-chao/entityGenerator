@@ -1,6 +1,8 @@
 package test.entity;
 
 import javax.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
 
 import test.entity.base.BaseParent;
 

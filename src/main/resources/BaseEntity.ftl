@@ -2,6 +2,7 @@ package ${pkg}.base;
 
 import javax.persistence.MappedSuperclass;
 
+import lombok.NoArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,23 +14,16 @@ import ${pkg};
 </#list>
 
 /**
- *
  * ${description}
  */
+@NoArgsConstructor
 @Getter
 @Setter
 @MappedSuperclass
 public abstract class Base${className} {
     /**
      * コンストラクタ
-     * 
-     */
-    public Base${className}() {
-    }
-
-    /**
-     * コンストラクタ
-     * 
+     *
      * @param id
      *            ID
      */

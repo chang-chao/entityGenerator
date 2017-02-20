@@ -1,29 +1,26 @@
 package ${pkg};
 
 import javax.persistence.Entity;
+import lombok.NoArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import ${pkg}.base.Base${className};
 
 /**
- *
  * ${description}
  */
+@NoArgsConstructor
 @Entity
 @Getter
 @Setter
 public class ${className} extends Base${className}{
     /**
      * コンストラクタ
-     * 
-     */
-    public ${className}() {
-    }
-
-    /**
-     * コンストラクタ
-     * 
+     *
      * @param id
      *            ID
      */
